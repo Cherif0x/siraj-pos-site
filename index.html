@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سراج – إدارة محلك بسهولة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .lang-switch {
+            margin-bottom: 40px;
+            font-size: 14px;
+        }
+
+        .lang-switch button {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .lang-switch button:hover {
+            color: #333;
+        }
+
+        .lang-switch button.active {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .lang-switch .separator {
+            color: #999;
+            margin: 0 5px;
+        }
+
+        .logo {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .download-btn:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 150px;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .download-btn {
+                font-size: 1rem;
+                padding: 12px 30px;
+            }
+
+            .phone {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <button id="btn-ar" class="active" onclick="switchLang('ar')">عربي</button>
+            <span class="separator">|</span>
+            <button id="btn-fr" onclick="switchLang('fr')">Français</button>
+        </div>
+
+        <img src="assets/logo_large.png" alt="Siraj Logo" class="logo">
+
+        <h1 id="title">سراج – إدارة محلك بسهولة</h1>
+        <p id="description">سراج هو برنامج سهل وعملي لإدارة المحلات التجارية،<br>مصمم لغير التقنيين ويعمل بدون إنترنت.
+        </p>
+        <a href="https://github.com/Cherif0x/siraj-pos-releases/releases/latest/download/SIRAJE-Setup.exe" class="download-btn" id="download-btn">⬇️ تحميل
+            البرنامج (Windows)</a>
+        <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">⏳ سيبدأ تحميل البرنامج تلقائيًا</p>
+        <div class="phone" id="phone">📞 44666699</div>
+    </div>
+
+    <script>
+        const content = {
+            ar: {
+                title: 'سراج – إدارة محلك بسهولة',
+                description: 'سراج هو برنامج سهل وعملي لإدارة المحلات التجارية،<br>مصمم لغير التقنيين ويعمل بدون إنترنت.',
+                download: '⬇️ تحميل البرنامج (Windows)',
+                phone: '📞 44666699'
+            },
+            fr: {
+                title: 'Siraj – Gérez votre magasin facilement',
+                description: 'Siraj est un logiciel simple et pratique pour la gestion des commerces,<br>conçu pour les non-techniciens et fonctionne sans internet.',
+                download: '⬇️ Télécharger le programme (Windows)',
+                phone: '📞 44666699'
+            }
+        };
+
+        function switchLang(lang) {
+            const html = document.documentElement;
+            const btnAr = document.getElementById('btn-ar');
+            const btnFr = document.getElementById('btn-fr');
+            const title = document.getElementById('title');
+            const description = document.getElementById('description');
+            const downloadBtn = document.getElementById('download-btn');
+            const phone = document.getElementById('phone');
+
+            if (lang === 'ar') {
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+                btnAr.classList.add('active');
+                btnFr.classList.remove('active');
+            } else {
+                html.setAttribute('lang', 'fr');
+                html.setAttribute('dir', 'ltr');
+                btnFr.classList.add('active');
+                btnAr.classList.remove('active');
+            }
+
+            title.textContent = content[lang].title;
+            description.innerHTML = content[lang].description;
+            downloadBtn.textContent = content[lang].download;
+            phone.textContent = content[lang].phone;
+        }
+    </script>
+</body>
+
+</html>
