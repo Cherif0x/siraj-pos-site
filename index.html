@@ -2,203 +2,738 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سراج – إدارة محلك بسهولة</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>سراج – نظام نقاط بيع وإدارة مخزون يعمل بدون إنترنت | Siraj POS</title>
+    <meta name="description"
+        content="حل عملي لإدارة محلك التجاري بسهولة وسرعة وأمان – مصمم للسوق الموريتاني. نقطة بيع، إدارة مخزون، تقارير مالية، يعمل بدون إنترنت.">
+    <meta name="keywords" content="سراج، نقطة بيع، إدارة مخزون، موريتانيا، POS، Siraj، نواكشوط، أوقية موريتانية">
+    <meta name="author" content="Siraj">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="سراج – نظام نقاط بيع وإدارة مخزون">
+    <meta property="og:description" content="حل عملي لإدارة محلك التجاري بسهولة وسرعة وأمان – مصمم للسوق الموريتاني">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cherif0x.github.io/siraj-pos-site/">
+    <meta property="og:image" content="https://cherif0x.github.io/siraj-pos-site/assets/sira_icon.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="سراج – نظام نقاط بيع وإدارة مخزون">
+    <meta name="twitter:description" content="حل عملي لإدارة محلك التجاري بسهولة وسرعة وأمان">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/sira_icon.png">
+    <link rel="apple-touch-icon" href="assets/sira_icon.png">
+
+    <!-- Google Fonts - Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #f5f5f5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        .container {
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .lang-switch {
-            margin-bottom: 40px;
-            font-size: 14px;
-        }
-
-        .lang-switch button {
-            background: none;
-            border: none;
-            color: #666;
-            cursor: pointer;
-            font-family: 'Cairo', sans-serif;
-            font-size: 14px;
-            padding: 5px 10px;
-            transition: color 0.3s;
-        }
-
-        .lang-switch button:hover {
-            color: #333;
-        }
-
-        .lang-switch button.active {
-            color: #333;
-            font-weight: 600;
-        }
-
-        .lang-switch .separator {
-            color: #999;
-            margin: 0 5px;
-        }
-
-        .logo {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-            margin-bottom: 30px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.2s;
-            margin-bottom: 10px;
-        }
-
-        .download-btn:hover {
-            background-color: #34495e;
-            transform: translateY(-2px);
-        }
-
-        .phone {
-            font-size: 1.3rem;
-            color: #333;
-            font-weight: 600;
-        }
-
-        @media (max-width: 600px) {
-            .logo {
-                max-width: 150px;
-                margin-bottom: 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .download-btn {
-                font-size: 1rem;
-                padding: 12px 30px;
-            }
-
-            .phone {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="lang-switch">
-            <button id="btn-ar" class="active" onclick="switchLang('ar')">عربي</button>
-            <span class="separator">|</span>
-            <button id="btn-fr" onclick="switchLang('fr')">Français</button>
+
+    <!-- ========== Header ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <img src="assets/sira_icon.png" alt="Siraj Logo">
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#features" class="nav-link" data-ar="الميزات" data-fr="Fonctionnalités">الميزات</a>
+                        </li>
+                        <li><a href="#how-it-works" class="nav-link" data-ar="كيف يعمل" data-fr="Comment ça marche">كيف
+                                يعمل</a></li>
+                        <li><a href="#pricing" class="nav-link" data-ar="الأسعار" data-fr="Tarifs">الأسعار</a></li>
+                        <li><a href="#faq" class="nav-link" data-ar="الأسئلة" data-fr="FAQ">الأسئلة</a></li>
+                        <li><a href="#contact" class="nav-link" data-ar="تواصل" data-fr="Contact">تواصل</a></li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <a href="https://wa.me/22244666699" target="_blank" class="btn btn-secondary btn-sm">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 0C4.477 0 0 4.477 0 10C0 11.89 0.525 13.66 1.438 15.168L0.546 18.2C0.493 18.394 0.546 18.602 0.684 18.746C0.822 18.89 1.026 18.946 1.22 18.894L4.318 18.028C5.804 18.911 7.538 19.421 9.391 19.484C14.814 19.484 19.484 14.814 19.484 9.391C19.484 4.168 15.223 0 10 0Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span data-ar="واتساب" data-fr="WhatsApp">واتساب</span>
+                    </a>
+
+                    <!-- Language Switcher -->
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="ar">AR</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <img src="assets/logo_large.png" alt="Siraj Logo" class="logo">
+    <!-- ========== Hero Section ========== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <!-- Hero Icon -->
+                    <div class="hero-icon">
+                        <img src="assets/sira_icon.png" alt="Siraj Icon">
+                    </div>
 
-        <h1 id="title">سراج – إدارة محلك بسهولة</h1>
-        <p id="description">سراج هو برنامج سهل وعملي لإدارة المحلات التجارية،<br>مصمم لغير التقنيين ويعمل بدون إنترنت.
-        </p>
-        <a href="https://github.com/Cherif0x/siraj-pos-releases/releases/latest/download/SIRAJE-Setup.exe" class="download-btn" id="download-btn">⬇️ تحميل
-            البرنامج (Windows)</a>
-        <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">⏳ سيبدأ تحميل البرنامج تلقائيًا</p>
-        <div class="phone" id="phone">📞 44666699</div>
-    </div>
+                    <!-- Hero Title -->
+                    <h1 data-ar="سراج – نظام نقاط بيع وإدارة مخزون يعمل بدون إنترنت"
+                        data-fr="Siraj – Système de point de vente et gestion de stock hors ligne">
+                        سراج – نظام نقاط بيع وإدارة مخزون يعمل بدون إنترنت
+                    </h1>
 
-    <script>
-        const content = {
-            ar: {
-                title: 'سراج – إدارة محلك بسهولة',
-                description: 'سراج هو برنامج سهل وعملي لإدارة المحلات التجارية،<br>مصمم لغير التقنيين ويعمل بدون إنترنت.',
-                download: '⬇️ تحميل البرنامج (Windows)',
-                phone: '📞 44666699'
-            },
-            fr: {
-                title: 'Siraj – Gérez votre magasin facilement',
-                description: 'Siraj est un logiciel simple et pratique pour la gestion des commerces,<br>conçu pour les non-techniciens et fonctionne sans internet.',
-                download: '⬇️ Télécharger le programme (Windows)',
-                phone: '📞 44666699'
-            }
-        };
+                    <!-- Hero Description -->
+                    <p data-ar="حل عملي لإدارة محلك التجاري بسهولة وسرعة وأمان – مصمم للسوق الموريتاني"
+                        data-fr="Solution pratique pour gérer votre commerce facilement, rapidement et en toute sécurité – conçu pour le marché mauritanien">
+                        حل عملي لإدارة محلك التجاري بسهولة وسرعة وأمان – مصمم للسوق الموريتاني
+                    </p>
 
-        function switchLang(lang) {
-            const html = document.documentElement;
-            const btnAr = document.getElementById('btn-ar');
-            const btnFr = document.getElementById('btn-fr');
-            const title = document.getElementById('title');
-            const description = document.getElementById('description');
-            const downloadBtn = document.getElementById('download-btn');
-            const phone = document.getElementById('phone');
+                    <!-- Hero Buttons -->
+                    <div class="hero-buttons">
+                        <a href="https://github.com/Cherif0x/siraj-pos-releases/releases/latest/download/SIRAJE-Setup.exe" class="btn btn-outline btn-lg btn-download">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 16L7 11H10V4H14V11H17L12 16Z" fill="currentColor" />
+                                <path d="M20 18V19H4V18H20Z" fill="currentColor" />
+                            </svg>
+                            <span data-ar="تحميل النسخة التجريبية – 30 يوم"
+                                data-fr="Télécharger la version d'essai – 30 jours">
+                                تحميل النسخة التجريبية – 30 يوم
+                            </span>
+                        </a>
+                        <a href="https://wa.me/22244666699" target="_blank" class="btn btn-secondary btn-lg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12C0 14.268 0.63 16.392 1.726 18.202L0.655 21.84C0.592 22.073 0.655 22.322 0.821 22.495C0.986 22.669 1.231 22.735 1.464 22.673L5.182 21.634C6.965 22.693 9.046 23.305 11.269 23.381C17.777 23.381 23.381 17.777 23.381 11.269C23.381 5.002 18.668 0 12 0Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span data-ar="تواصل معنا عبر واتساب" data-fr="Contactez-nous via WhatsApp">
+                                تواصل معنا عبر واتساب
+                            </span>
+                        </a>
+                    </div>
+                </div>
 
-            if (lang === 'ar') {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                btnAr.classList.add('active');
-                btnFr.classList.remove('active');
-            } else {
-                html.setAttribute('lang', 'fr');
-                html.setAttribute('dir', 'ltr');
-                btnFr.classList.add('active');
-                btnAr.classList.remove('active');
-            }
+                <!-- Hero Image -->
+                <div class="hero-image">
+                    <img src="assets/screenshots/pos.png" alt="Siraj POS Screenshot"
+                        onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            title.textContent = content[lang].title;
-            description.innerHTML = content[lang].description;
-            downloadBtn.textContent = content[lang].download;
-            phone.textContent = content[lang].phone;
-        }
-    </script>
+    <!-- ========== Features Section ========== -->
+    <section id="features" class="bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="مميزات سراج" data-fr="Fonctionnalités de Siraj">مميزات سراج</h2>
+                <p class="section-subtitle" data-ar="كل ما تحتاجه لإدارة محلك التجاري في مكان واحد"
+                    data-fr="Tout ce dont vous avez besoin pour gérer votre commerce en un seul endroit">
+                    كل ما تحتاجه لإدارة محلك التجاري في مكان واحد
+                </p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Feature 1 -->
+                <div class="card feature-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8V24M8 16H24" stroke="white" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title" data-ar="نقطة بيع سريعة" data-fr="Point de vente rapide">نقطة بيع سريعة</h3>
+                    <p class="card-text"
+                        data-ar="واجهة بسيطة وسريعة لإتمام عمليات البيع في ثوانٍ مع طباعة فواتير احترافية"
+                        data-fr="Interface simple et rapide pour finaliser les ventes en quelques secondes avec impression de factures professionnelles">
+                        واجهة بسيطة وسريعة لإتمام عمليات البيع في ثوانٍ مع طباعة فواتير احترافية
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card feature-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="12" width="16" height="12" rx="2" stroke="white" stroke-width="2.5" />
+                            <path d="M12 12V10C12 8.343 13.343 7 15 7H17C18.657 7 20 8.343 20 10V12" stroke="white"
+                                stroke-width="2.5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title" data-ar="إدارة مخزون ذكية" data-fr="Gestion intelligente des stocks">إدارة
+                        مخزون ذكية</h3>
+                    <p class="card-text"
+                        data-ar="تتبع المنتجات والكميات مع تنبيهات تلقائية عند نفاد المخزون وتقارير مفصلة"
+                        data-fr="Suivi des produits et quantités avec alertes automatiques en cas de rupture de stock et rapports détaillés">
+                        تتبع المنتجات والكميات مع تنبيهات تلقائية عند نفاد المخزون وتقارير مفصلة
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card feature-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 20L14 12L20 18L28 8" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="14" cy="12" r="2" fill="white" />
+                            <circle cx="20" cy="18" r="2" fill="white" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title" data-ar="تقارير مالية شاملة" data-fr="Rapports financiers complets">تقارير
+                        مالية شاملة</h3>
+                    <p class="card-text" data-ar="تقارير يومية وشهرية للمبيعات والأرباح والمصروفات مع رسوم بيانية واضحة"
+                        data-fr="Rapports quotidiens et mensuels des ventes, profits et dépenses avec graphiques clairs">
+                        تقارير يومية وشهرية للمبيعات والأرباح والمصروفات مع رسوم بيانية واضحة
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card feature-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="12" r="4" stroke="white" stroke-width="2.5" />
+                            <path d="M8 26C8 21.582 11.582 18 16 18C20.418 18 24 21.582 24 26" stroke="white"
+                                stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title" data-ar="إدارة العملاء والموردين" data-fr="Gestion clients et fournisseurs">
+                        إدارة العملاء والموردين</h3>
+                    <p class="card-text" data-ar="سجل كامل للعملاء والموردين مع متابعة الديون والمدفوعات والمشتريات"
+                        data-fr="Registre complet des clients et fournisseurs avec suivi des crédits, paiements et achats">
+                        سجل كامل للعملاء والموردين مع متابعة الديون والمدفوعات والمشتريات
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card feature-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="16" height="16" rx="2" stroke="white" stroke-width="2.5" />
+                            <path d="M16 12V20M12 16H20" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title" data-ar="أمان وحماية محلية" data-fr="Sécurité et protection locale">أمان
+                        وحماية محلية</h3>
+                    <p class="card-text" data-ar="بياناتك محفوظة محلياً على جهازك بنظام تشفير قوي وحماية كاملة"
+                        data-fr="Vos données sont stockées localement sur votre appareil avec cryptage fort et protection complète">
+                        بياناتك محفوظة محلياً على جهازك بنظام تشفير قوي وحماية كاملة
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card feature-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 8H24V24H8V8Z" stroke="white" stroke-width="2.5" />
+                            <path d="M12 12H20M12 16H18M12 20H16" stroke="white" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title" data-ar="دعم عربي وفرنسي" data-fr="Support arabe et français">دعم عربي وفرنسي
+                    </h3>
+                    <p class="card-text" data-ar="واجهة باللغتين العربية والفرنسية مع دعم فني محلي بكلا اللغتين"
+                        data-fr="Interface en arabe et français avec support technique local dans les deux langues">
+                        واجهة باللغتين العربية والفرنسية مع دعم فني محلي بكلا اللغتين
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Benefits Section ========== -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="لماذا سراج؟" data-fr="Pourquoi Siraj?">لماذا سراج؟</h2>
+            </div>
+
+            <div class="grid grid-2">
+                <!-- Benefit 1 -->
+                <div class="card benefit-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8V24M8 16H24" stroke="white" stroke-width="3" stroke-linecap="round" />
+                            <circle cx="16" cy="16" r="3" fill="white" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="card-title" data-ar="يعمل بدون إنترنت 100%" data-fr="Fonctionne 100% hors ligne">يعمل
+                            بدون إنترنت 100%</h3>
+                        <p class="card-text"
+                            data-ar="لا تقلق من انقطاع الإنترنت. سراج يعمل بكامل طاقته بدون اتصال بالشبكة"
+                            data-fr="Ne vous inquiétez pas des coupures Internet. Siraj fonctionne à pleine capacité sans connexion">
+                            لا تقلق من انقطاع الإنترنت. سراج يعمل بكامل طاقته بدون اتصال بالشبكة
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="card benefit-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="8" stroke="white" stroke-width="2.5" />
+                            <path d="M16 12V16L20 18" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="card-title" data-ar="سهل الاستخدام ولا يحتاج خبرة"
+                            data-fr="Facile à utiliser sans expertise">سهل الاستخدام ولا يحتاج خبرة</h3>
+                        <p class="card-text" data-ar="واجهة بسيطة وواضحة يمكن لأي شخص استخدامها بدون تدريب معقد"
+                            data-fr="Interface simple et claire que tout le monde peut utiliser sans formation complexe">
+                            واجهة بسيطة وواضحة يمكن لأي شخص استخدامها بدون تدريب معقد
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="card benefit-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 4L20 12H28L22 18L24 26L16 22L8 26L10 18L4 12H12L16 4Z" stroke="white"
+                                stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="card-title" data-ar="مصمم للسوق الموريتاني (MRU + العربية)"
+                            data-fr="Conçu pour le marché mauritanien (MRU + Arabe)">مصمم للسوق الموريتاني (MRU +
+                            العربية)</h3>
+                        <p class="card-text" data-ar="دعم كامل للأوقية الموريتانية (MRU) واللغة العربية والفرنسية"
+                            data-fr="Support complet de l'Ouguiya mauritanien (MRU) et des langues arabe et française">
+                            دعم كامل للأوقية الموريتانية (MRU) واللغة العربية والفرنسية
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="card benefit-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="10" stroke="white" stroke-width="2.5" />
+                            <path d="M16 10V16L20 20" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="card-title" data-ar="دعم فني محلي عربي/فرنسي"
+                            data-fr="Support technique local arabe/français">دعم فني محلي عربي/فرنسي</h3>
+                        <p class="card-text" data-ar="فريق دعم فني محلي متواجد للمساعدة باللغتين العربية والفرنسية"
+                            data-fr="Équipe de support technique locale disponible pour aider en arabe et français">
+                            فريق دعم فني محلي متواجد للمساعدة باللغتين العربية والفرنسية
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== How It Works Section ========== -->
+    <section id="how-it-works" class="bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="كيف يعمل سراج؟" data-fr="Comment fonctionne Siraj?">كيف يعمل سراج؟
+                </h2>
+                <p class="section-subtitle" data-ar="ابدأ في 4 خطوات بسيطة" data-fr="Commencez en 4 étapes simples">
+                    ابدأ في 4 خطوات بسيطة
+                </p>
+            </div>
+
+            <div class="grid grid-4">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title" data-ar="حمّل البرنامج" data-fr="Téléchargez">حمّل البرنامج</h3>
+                    <p class="step-text" data-ar="قم بتحميل وتثبيت سراج على جهاز الكمبيوتر"
+                        data-fr="Téléchargez et installez Siraj sur votre ordinateur">
+                        قم بتحميل وتثبيت سراج على جهاز الكمبيوتر
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title" data-ar="أضف منتجاتك" data-fr="Ajoutez vos produits">أضف منتجاتك</h3>
+                    <p class="step-text" data-ar="أدخل المنتجات والأسعار بسهولة من الواجهة البسيطة"
+                        data-fr="Saisissez les produits et prix facilement depuis l'interface simple">
+                        أدخل المنتجات والأسعار بسهولة من الواجهة البسيطة
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title" data-ar="ابدأ البيع" data-fr="Commencez à vendre">ابدأ البيع</h3>
+                    <p class="step-text" data-ar="استخدم نقطة البيع لإتمام المعاملات وطباعة الفواتير"
+                        data-fr="Utilisez le point de vente pour finaliser les transactions et imprimer les factures">
+                        استخدم نقطة البيع لإتمام المعاملات وطباعة الفواتير
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title" data-ar="راقب أرباحك" data-fr="Suivez vos profits">راقب أرباحك</h3>
+                    <p class="step-text" data-ar="تابع التقارير اليومية والشهرية لمعرفة أداء محلك"
+                        data-fr="Consultez les rapports quotidiens et mensuels pour connaître les performances">
+                        تابع التقارير اليومية والشهرية لمعرفة أداء محلك
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Screenshots Section ========== -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="لقطات من البرنامج" data-fr="Captures d'écran">لقطات من البرنامج</h2>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="screenshot-card">
+                    <img src="assets/screenshots/pos.png" alt="POS Screen"
+                        onerror="this.parentElement.style.display='none'">
+                </div>
+                <div class="screenshot-card">
+                    <img src="assets/screenshots/inventory.png" alt="Inventory Screen"
+                        onerror="this.parentElement.style.display='none'">
+                </div>
+                <div class="screenshot-card">
+                    <img src="assets/screenshots/reports.png" alt="Reports Screen"
+                        onerror="this.parentElement.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Pricing Section ========== -->
+    <section id="pricing" class="bg-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="الأسعار" data-fr="Tarifs">الأسعار</h2>
+                <p class="section-subtitle" data-ar="اختر الخطة المناسبة لك"
+                    data-fr="Choisissez le plan qui vous convient">
+                    اختر الخطة المناسبة لك
+                </p>
+            </div>
+
+            <div class="grid grid-2">
+                <!-- Trial Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-title" data-ar="تجربة مجانية" data-fr="Essai gratuit">تجربة مجانية</h3>
+                    <div class="pricing-price">
+                        <span data-ar="مجاناً" data-fr="Gratuit">مجاناً</span>
+                    </div>
+                    <p class="pricing-period" data-ar="30 يوم" data-fr="30 jours">30 يوم</p>
+                    <ul class="pricing-features">
+                        <li data-ar="جميع المميزات متاحة" data-fr="Toutes les fonctionnalités disponibles">جميع المميزات
+                            متاحة</li>
+                        <li data-ar="بدون حدود على المنتجات" data-fr="Sans limite de produits">بدون حدود على المنتجات
+                        </li>
+                        <li data-ar="دعم فني كامل" data-fr="Support technique complet">دعم فني كامل</li>
+                        <li data-ar="تقارير مفصلة" data-fr="Rapports détaillés">تقارير مفصلة</li>
+                    </ul>
+                    <a href="https://github.com/Cherif0x/siraj-pos-releases/releases/latest/download/SIRAJE-Setup.exe" class="btn btn-ghost btn-download">
+                        <span data-ar="تحميل النسخة التجريبية" data-fr="Télécharger la version d'essai">تحميل النسخة
+                            التجريبية</span>
+                    </a>
+                </div>
+
+                <!-- Annual License -->
+                <div class="pricing-card featured">
+                    <h3 class="pricing-title" data-ar="ترخيص سنوي" data-fr="Licence annuelle">ترخيص سنوي</h3>
+                    <div class="pricing-price">
+                        <span data-ar="اتصل بنا" data-fr="Contactez-nous">اتصل بنا</span>
+                    </div>
+                    <p class="pricing-period" data-ar="سنة كاملة" data-fr="Une année complète">سنة كاملة</p>
+                    <ul class="pricing-features">
+                        <li data-ar="جميع مميزات النسخة التجريبية" data-fr="Toutes les fonctionnalités de l'essai">جميع
+                            مميزات النسخة التجريبية</li>
+                        <li data-ar="تحديثات مجانية طوال السنة" data-fr="Mises à jour gratuites toute l'année">تحديثات
+                            مجانية طوال السنة</li>
+                        <li data-ar="دعم فني مخصص" data-fr="Support technique dédié">دعم فني مخصص</li>
+                        <li data-ar="نسخ احتياطي تلقائي" data-fr="Sauvegarde automatique">نسخ احتياطي تلقائي</li>
+                        <li data-ar="تدريب مجاني" data-fr="Formation gratuite">تدريب مجاني</li>
+                    </ul>
+                    <a href="https://wa.me/22244666699" target="_blank" class="btn btn-primary">
+                        <span data-ar="تواصل للحصول على السعر" data-fr="Contactez pour le prix">تواصل للحصول على
+                            السعر</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ Section ========== -->
+    <section id="faq" class="section-sm">
+        <div class="container container-narrow">
+            <div class="section-header">
+                <h2 class="section-title" data-ar="الأسئلة الشائعة" data-fr="Questions fréquentes">الأسئلة الشائعة</h2>
+            </div>
+
+            <div class="faq-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="هل يعمل سراج بدون إنترنت فعلاً؟"
+                            data-fr="Siraj fonctionne-t-il vraiment hors ligne?">
+                            هل يعمل سراج بدون إنترنت فعلاً؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="نعم، سراج يعمل بشكل كامل بدون الحاجة للإنترنت. جميع البيانات محفوظة محلياً على جهازك."
+                            data-fr="Oui, Siraj fonctionne entièrement sans connexion Internet. Toutes les données sont stockées localement sur votre appareil.">
+                            نعم، سراج يعمل بشكل كامل بدون الحاجة للإنترنت. جميع البيانات محفوظة محلياً على جهازك.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="هل يدعم سراج الطابعات الحرارية؟"
+                            data-fr="Siraj supporte-t-il les imprimantes thermiques?">
+                            هل يدعم سراج الطابعات الحرارية؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="نعم، سراج يدعم الطابعات الحرارية والعادية. يمكنك طباعة الفواتير مباشرة بعد كل عملية بيع."
+                            data-fr="Oui, Siraj supporte les imprimantes thermiques et standard. Vous pouvez imprimer les factures directement après chaque vente.">
+                            نعم، سراج يدعم الطابعات الحرارية والعادية. يمكنك طباعة الفواتير مباشرة بعد كل عملية بيع.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="كم عدد المنتجات التي يمكنني إضافتها؟"
+                            data-fr="Combien de produits puis-je ajouter?">
+                            كم عدد المنتجات التي يمكنني إضافتها؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="لا يوجد حد لعدد المنتجات. يمكنك إضافة عدد غير محدود من المنتجات حسب احتياجات محلك."
+                            data-fr="Il n'y a pas de limite au nombre de produits. Vous pouvez ajouter un nombre illimité de produits selon les besoins de votre commerce.">
+                            لا يوجد حد لعدد المنتجات. يمكنك إضافة عدد غير محدود من المنتجات حسب احتياجات محلك.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="هل يمكنني استخدام سراج على أكثر من جهاز؟"
+                            data-fr="Puis-je utiliser Siraj sur plusieurs appareils?">
+                            هل يمكنني استخدام سراج على أكثر من جهاز؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="الترخيص الواحد يعمل على جهاز واحد. للاستخدام على أجهزة متعددة، تواصل معنا للحصول على عرض خاص."
+                            data-fr="Une licence fonctionne sur un seul appareil. Pour une utilisation sur plusieurs appareils, contactez-nous pour une offre spéciale.">
+                            الترخيص الواحد يعمل على جهاز واحد. للاستخدام على أجهزة متعددة، تواصل معنا للحصول على عرض
+                            خاص.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="كيف أحصل على الدعم الفني؟" data-fr="Comment obtenir le support technique?">
+                            كيف أحصل على الدعم الفني؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="يمكنك التواصل معنا عبر واتساب على الرقم +222 44 66 66 99 وسيقوم فريقنا بمساعدتك فوراً."
+                            data-fr="Vous pouvez nous contacter via WhatsApp au +222 44 66 66 99 et notre équipe vous aidera immédiatement.">
+                            يمكنك التواصل معنا عبر واتساب على الرقم +222 44 66 66 99 وسيقوم فريقنا بمساعدتك فوراً.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="هل بياناتي آمنة؟" data-fr="Mes données sont-elles sécurisées?">
+                            هل بياناتي آمنة؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="نعم، جميع بياناتك محفوظة محلياً على جهازك مع نظام تشفير قوي. لا يتم إرسال أي بيانات للإنترنت."
+                            data-fr="Oui, toutes vos données sont stockées localement sur votre appareil avec un système de cryptage fort. Aucune donnée n'est envoyée sur Internet.">
+                            نعم، جميع بياناتك محفوظة محلياً على جهازك مع نظام تشفير قوي. لا يتم إرسال أي بيانات
+                            للإنترنت.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-ar="هل يدعم سراج العملة الموريتانية (MRU)؟"
+                            data-fr="Siraj supporte-t-il la monnaie mauritanienne (MRU)?">
+                            هل يدعم سراج العملة الموريتانية (MRU)؟
+                        </span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content"
+                            data-ar="نعم، سراج مصمم خصيصاً للسوق الموريتاني ويدعم الأوقية الموريتانية (MRU) بشكل كامل."
+                            data-fr="Oui, Siraj est spécialement conçu pour le marché mauritanien et supporte entièrement l'Ouguiya mauritanien (MRU).">
+                            نعم، سراج مصمم خصيصاً للسوق الموريتاني ويدعم الأوقية الموريتانية (MRU) بشكل كامل.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Final CTA Section ========== -->
+    <section class="cta-section">
+        <div class="container container-narrow">
+            <h2 data-ar="جرّب سراج اليوم مجاناً" data-fr="Essayez Siraj gratuitement aujourd'hui">جرّب سراج اليوم مجاناً
+            </h2>
+            <p data-ar="ابدأ بإدارة محلك التجاري بطريقة احترافية وسهلة. 30 يوم تجربة مجانية بدون أي التزامات."
+                data-fr="Commencez à gérer votre commerce de manière professionnelle et facile. 30 jours d'essai gratuit sans engagement.">
+                ابدأ بإدارة محلك التجاري بطريقة احترافية وسهلة. 30 يوم تجربة مجانية بدون أي التزامات.
+            </p>
+            <div class="cta-buttons">
+                <a href="https://github.com/Cherif0x/siraj-pos-releases/releases/latest/download/SIRAJE-Setup.exe" class="btn btn-outline btn-lg btn-download">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16L7 11H10V4H14V11H17L12 16Z" fill="currentColor" />
+                        <path d="M20 18V19H4V18H20Z" fill="currentColor" />
+                    </svg>
+                    <span data-ar="تحميل النسخة التجريبية" data-fr="Télécharger la version d'essai">تحميل النسخة
+                        التجريبية</span>
+                </a>
+                <a href="https://wa.me/22244666699" target="_blank" class="btn btn-secondary btn-lg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12C0 14.268 0.63 16.392 1.726 18.202L0.655 21.84C0.592 22.073 0.655 22.322 0.821 22.495C0.986 22.669 1.231 22.735 1.464 22.673L5.182 21.634C6.965 22.693 9.046 23.305 11.269 23.381C17.777 23.381 23.381 17.777 23.381 11.269C23.381 5.002 18.668 0 12 0Z"
+                            fill="currentColor" />
+                    </svg>
+                    <span data-ar="تواصل معنا" data-fr="Contactez-nous">تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Logo -->
+                <div class="footer-logo">
+                    <img src="assets/sira_icon.png" alt="Siraj Logo">
+                    <h3 data-ar="سراج" data-fr="Siraj">سراج</h3>
+                    <p data-ar="نظام نقاط بيع وإدارة مخزون احترافي"
+                        data-fr="Système professionnel de point de vente et gestion de stock">
+                        نظام نقاط بيع وإدارة مخزون احترافي
+                    </p>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="footer-links">
+                    <a href="https://wa.me/22244666699" target="_blank" class="footer-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 0C4.477 0 0 4.477 0 10C0 11.89 0.525 13.66 1.438 15.168L0.546 18.2C0.493 18.394 0.546 18.602 0.684 18.746C0.822 18.89 1.026 18.946 1.22 18.894L4.318 18.028C5.804 18.911 7.538 19.421 9.391 19.484C14.814 19.484 19.484 14.814 19.484 9.391C19.484 4.168 15.223 0 10 0Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span data-ar="واتساب: +222 44 66 66 99" data-fr="WhatsApp: +222 44 66 66 99">واتساب: +222 44 66
+                            66 99</span>
+                    </a>
+                    <a href="tel:+22244666699" class="footer-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2 3C2 2.447 2.447 2 3 2H5.153C5.694 2 6.16 2.387 6.255 2.917L7.084 7.417C7.166 7.871 6.962 8.331 6.566 8.566L5 9.5C6.5 12.5 9.5 15.5 12.5 17L13.434 15.434C13.669 15.038 14.129 14.834 14.583 14.916L19.083 15.745C19.613 15.84 20 16.306 20 16.847V19C20 19.553 19.553 20 19 20H17C8.163 20 1 12.837 1 4V2C1 2.447 1.447 2 2 2Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span data-ar="هاتف: +222 44 66 66 99" data-fr="Tél: +222 44 66 66 99">هاتف: +222 44 66 66
+                            99</span>
+                    </a>
+                    <div class="footer-link">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 2C6.134 2 3 5.134 3 9C3 13.5 10 20 10 20C10 20 17 13.5 17 9C17 5.134 13.866 2 10 2Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <circle cx="10" cy="9" r="2.5" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span data-ar="نواكشوط – موريتانيا" data-fr="Nouakchott – Mauritanie">نواكشوط – موريتانيا</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p data-ar="© 2026 سراج. جميع الحقوق محفوظة." data-fr="© 2026 Siraj. Tous droits réservés.">
+                    © 2026 سراج. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

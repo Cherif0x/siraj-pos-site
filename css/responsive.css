@@ -1,0 +1,392 @@
+/* ===================================
+   RESPONSIVE.CSS - Media Queries
+   =================================== */
+
+/* Tablet and Below (968px) */
+@media (max-width: 968px) {
+
+    /* Typography Adjustments */
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    /* Header */
+    .header-content {
+        padding: var(--space-sm) 0;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: var(--space-lg);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-base);
+        z-index: var(--z-dropdown);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        gap: var(--space-md);
+    }
+
+    /* Hero */
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-xl);
+    }
+
+    .hero-text {
+        text-align: center !important;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-icon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Grid Adjustments */
+    .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    /* Cards */
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit-card .card-icon {
+        margin: 0 auto var(--space-md);
+    }
+
+    /* Section Spacing */
+    section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .section-lg {
+        padding: var(--space-3xl) 0;
+    }
+}
+
+/* Mobile (640px and below) */
+@media (max-width: 640px) {
+
+    /* Root Variables Adjustments */
+    :root {
+        --space-xl: 2rem;
+        --space-2xl: 3rem;
+        --space-3xl: 4rem;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    /* Header */
+    .header-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-buttons,
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-lg {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: var(--space-2xl) 0;
+    }
+
+    .hero-icon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Grid */
+    .grid,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    /* Cards */
+    .card {
+        padding: var(--space-lg);
+    }
+
+    .card-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .card-icon svg,
+    .card-icon i {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Pricing */
+    .pricing-card {
+        padding: var(--space-lg);
+    }
+
+    .pricing-price {
+        font-size: 2rem;
+    }
+
+    /* FAQ */
+    .faq-question {
+        padding: var(--space-md);
+        font-size: 1rem;
+    }
+
+    .faq-answer-content {
+        padding: 0 var(--space-md) var(--space-md);
+        font-size: 0.9rem;
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: var(--space-xl);
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--space-xl) 0 var(--space-md);
+    }
+
+    .footer-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Step Cards */
+    .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.625rem;
+    }
+
+    h2 {
+        font-size: 1.375rem;
+    }
+
+    .hero-icon img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card {
+        padding: var(--space-md);
+    }
+
+    .section-title::after {
+        width: 40px;
+    }
+}
+
+/* Large Desktop (1400px and above) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .hero-content {
+        gap: var(--space-3xl);
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .header,
+    .menu-toggle,
+    .lang-switcher,
+    .btn,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .card,
+    .faq-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    section {
+        padding: var(--space-lg) 0;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment to enable dark mode
+  :root {
+    --bg-light: #111827;
+    --white: #1F2937;
+    --text-main: #F9FAFB;
+    --text-muted: #D1D5DB;
+    --gray-900: #F9FAFB;
+  }
+  
+  .header {
+    background: rgba(31, 41, 55, 0.98);
+  }
+  
+  .card,
+  .faq-item,
+  .pricing-card {
+    background: #1F2937;
+  }
+  */
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .btn {
+        border-width: 3px;
+    }
+
+    .card {
+        border: 2px solid var(--text-main);
+    }
+
+    .nav-link::after {
+        height: 3px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 968px) and (orientation: landscape) {
+    .hero {
+        padding: var(--space-xl) 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-text {
+        text-align: right !important;
+    }
+
+    [dir="ltr"] .hero-text {
+        text-align: left !important;
+    }
+}
