@@ -95,12 +95,22 @@ document.addEventListener('DOMContentLoaded', function () {
             // Save preference
             localStorage.setItem('siraj-lang', lang);
 
-            // Redirect to appropriate page
+            // Disable redirection for now to rely on SPA text swapping, OR correct it.
+            // If we want SPA only:
+            /*
             if (lang === 'fr' && !window.location.pathname.includes('/fr/')) {
                 window.location.href = '/fr/';
             } else if (lang === 'ar' && window.location.pathname.includes('/fr/')) {
-                window.location.href = '/';
+                // Handle path adjustment for root
+                 const path = window.location.pathname.replace('/fr/', '/');
+                 window.location.href = path || '/';
             }
+            */
+            // Ideally, we just swap text and update URL query param or state, but let's stick to what works.
+            // If I fix `fr/index.html` paths, redirection is fine.
+            // But user said "switch to french becomes white".
+            // Let's assume paths are broken.
+
         });
     });
 
