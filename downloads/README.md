@@ -1,29 +1,29 @@
-# Siraj POS - Trial Version
+# سِراج - النسخة التجريبية
 
-This is a placeholder file for the Siraj POS trial version.
+هذا ملف مؤقت للنسخة التجريبية من تطبيق سِراج.
 
-## Instructions
+## التعليمات
 
-Replace this file with the actual Siraj installer executable.
+استبدل هذا الملف بملف التثبيت الفعلي لتطبيق سِراج.
 
-The installer should be named: `siraj-trial.exe`
+يجب أن يكون اسم ملف التثبيت: `siraj-trial.exe`
 
-## Expected Features
+## المميزات المتوقعة
 
-- 30-day trial period
-- Full functionality
-- No credit card required
-- Offline operation
-- Arabic and French support
-- Mauritanian Ouguiya (MRU) currency support
+- فترة تجريبية 30 يوم
+- جميع المميزات متاحة
+- لا حاجة لبطاقة ائتمان
+- يعمل بدون إنترنت
+- دعم اللغتين العربية والفرنسية
+- دعم الأوقية الموريتانية (MRU)
 
-## Contact
+## التواصل
 
-For the actual installer, contact:
-- WhatsApp: +222 44 66 66 99
-- Phone: +222 44 66 66 99
-- Location: Nouakchott, Mauritania
+للحصول على ملف التثبيت الفعلي، تواصل معنا:
+- واتساب: +222 44 66 66 99
+- هاتف: +222 44 66 66 99
+- الموقع: نواكشوط، موريتانيا
 
 ---
 
-© 2026 Siraj. All rights reserved.
+© 2026 سِراج. جميع الحقوق محفوظة.

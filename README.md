@@ -1,21 +1,19 @@
-# Siraj POS - Landing Page
+# سِراج - صفحة الهبوط
 
-## 📋 Description
+## 📋 الوصف
 
-Page de destination professionnelle pour Siraj - Système de point de vente et gestion de stock hors ligne pour le marché mauritanien.
+صفحة هبوط احترافية لتطبيق سِراج - نظام نقاط بيع وإدارة مخزون يعمل بدون إنترنت للسوق الموريتاني.
 
-Professional landing page for Siraj - Offline POS and inventory management system for the Mauritanian market.
+## 🚀 النشر على GitHub Pages
 
-## 🚀 Déploiement sur GitHub Pages
+### الخطوات:
 
-### Étapes:
+1. **إنشاء مستودع على GitHub**
+   - اذهب إلى GitHub.com
+   - أنشئ مستودع جديد (مثال: `siraj-pos-site`)
+   - ابدأه بدون README
 
-1. **Créer un dépôt GitHub**
-   - Allez sur GitHub.com
-   - Créez un nouveau dépôt (ex: `siraj-pos-site`)
-   - Initialisez-le sans README
-
-2. **Pousser les fichiers**
+2. **رفع الملفات**
    ```bash
    git init
    git add .
@@ -25,115 +23,115 @@ Professional landing page for Siraj - Offline POS and inventory management syste
    git push -u origin main
    ```
 
-3. **Activer GitHub Pages**
-   - Allez dans Settings > Pages
+3. **تفعيل GitHub Pages**
+   - اذهب إلى Settings > Pages
    - Source: Deploy from a branch
    - Branch: main / (root)
-   - Cliquez sur Save
+   - اضغط على Save
 
-4. **Votre site sera disponible à:**
+4. **سيكون موقعك متاحاً على:**
    ```
    https://cherif0x.github.io/siraj-pos-site/
    ```
 
-## 📁 Structure du Projet
+## 📁 هيكل المشروع
 
 ```
 /
-├── index.html              # Page principale (Arabe)
+├── index.html              # الصفحة الرئيسية (عربي)
 ├── fr/
-│   └── index.html         # Page française
+│   └── index.html         # الصفحة الفرنسية
 ├── assets/
-│   ├── siraj_icon.png      # Logo Siraj
+│   ├── sira_icon.png      # شعار سِراج
 │   └── screenshots/
-│       ├── pos.png        # Capture d'écran POS
-│       ├── inventory.png  # Capture d'écran inventaire
-│       └── reports.png    # Capture d'écran rapports
+│       ├── pos.png        # لقطة شاشة نقطة البيع
+│       ├── inventory.png  # لقطة شاشة المخزون
+│       └── reports.png    # لقطة شاشة التقارير
 ├── css/
-│   ├── base.css          # Reset, variables, typographie
-│   ├── layout.css        # Grille, conteneurs, sections
-│   ├── components.css    # Boutons, cartes, composants
-│   └── responsive.css    # Media queries
+│   ├── base.css          # إعادة تعيين، متغيرات، خطوط
+│   ├── layout.css        # شبكة، حاويات، أقسام
+│   ├── components.css    # أزرار، بطاقات، مكونات
+│   └── responsive.css    # استعلامات الوسائط
 ├── js/
-│   └── main.js           # Menu mobile, scroll, FAQ
+│   └── main.js           # قائمة الموبايل، التمرير، الأسئلة
 ├── downloads/
-│   └── siraj-trial.exe   # Fichier d'installation (à ajouter)
-└── README.md             # Ce fichier
+│   └── siraj-trial.exe   # ملف التثبيت (يجب إضافته)
+└── README.md             # هذا الملف
 ```
 
-## 🎨 Palette de Couleurs
+## 🎨 لوحة الألوان
 
 ```css
---primary: #1E88A8       /* Bleu principal */
---secondary: #3BAED4     /* Bleu secondaire */
---bg-light: #F4F7FA      /* Fond clair */
---white: #FFFFFF         /* Blanc */
---text-main: #1F2937     /* Texte principal */
---text-muted: #6B7280    /* Texte atténué */
---success: #22C55E       /* Vert succès */
---danger: #EF4444        /* Rouge danger */
+--primary: #1E88A8       /* الأزرق الرئيسي */
+--secondary: #3BAED4     /* الأزرق الثانوي */
+--bg-light: #F4F7FA      /* خلفية فاتحة */
+--white: #FFFFFF         /* أبيض */
+--text-main: #1F2937     /* نص رئيسي */
+--text-muted: #6B7280    /* نص خافت */
+--success: #22C55E       /* أخضر النجاح */
+--danger: #EF4444        /* أحمر الخطر */
 ```
 
-## ✨ Fonctionnalités
+## ✨ المميزات
 
-- ✅ Design responsive (Mobile / Tablet / Desktop)
-- ✅ Support bilingue (Arabe RTL / Français LTR)
-- ✅ Menu mobile hamburger
-- ✅ Défilement fluide
-- ✅ Accordéon FAQ
-- ✅ Animations au scroll
-- ✅ SEO optimisé
-- ✅ Fonctionne hors ligne (après premier chargement)
+- ✅ تصميم متجاوب (موبايل / تابلت / ديسكتوب)
+- ✅ دعم ثنائي اللغة (عربي RTL / فرنسي LTR)
+- ✅ قائمة موبايل همبرغر
+- ✅ تمرير سلس
+- ✅ أكورديون للأسئلة الشائعة
+- ✅ رسوم متحركة عند التمرير
+- ✅ محسّن لمحركات البحث (SEO)
+- ✅ يعمل بدون اتصال (بعد التحميل الأول)
 
-## 📱 Sections
+## 📱 الأقسام
 
-1. **Header** - Navigation avec logo et liens
-2. **Hero** - Section principale avec CTA
-3. **Features** - 6 fonctionnalités principales
-4. **Benefits** - 4 avantages clés
-5. **How It Works** - 4 étapes simples
-6. **Screenshots** - 3 captures d'écran
-7. **Pricing** - Plans tarifaires
-8. **FAQ** - 7 questions fréquentes
-9. **CTA Final** - Appel à l'action
-10. **Footer** - Contact et informations
+1. **Header** - التنقل مع الشعار والروابط
+2. **Hero** - القسم الرئيسي مع دعوة للعمل
+3. **Features** - 6 مميزات رئيسية
+4. **Benefits** - 4 فوائد أساسية
+5. **How It Works** - 4 خطوات بسيطة
+6. **Screenshots** - 3 لقطات شاشة
+7. **Pricing** - خطط الأسعار
+8. **FAQ** - 7 أسئلة شائعة
+9. **CTA Final** - دعوة نهائية للعمل
+10. **Footer** - التواصل والمعلومات
 
-## 🔧 Personnalisation
+## 🔧 التخصيص
 
-### Modifier les couleurs:
-Éditez `css/base.css` et changez les variables CSS dans `:root`
+### تعديل الألوان:
+عدّل `css/base.css` وغيّر متغيرات CSS في `:root`
 
-### Ajouter des images:
-Placez vos images dans `assets/` et `assets/screenshots/`
+### إضافة الصور:
+ضع صورك في `assets/` و `assets/screenshots/`
 
-### Modifier le contenu:
-- Arabe: `index.html`
-- Français: `fr/index.html`
+### تعديل المحتوى:
+- عربي: `index.html`
+- فرنسي: `fr/index.html`
 
-### Contact:
-Modifiez le numéro WhatsApp dans tous les liens:
+### التواصل:
+عدّل رقم الواتساب في جميع الروابط:
 ```html
 https://wa.me/22244666699
 ```
 
-## 📞 Contact
+## 📞 التواصل
 
-- **WhatsApp**: +222 44 66 66 99
-- **Téléphone**: +222 44 66 66 99
-- **Localisation**: Nouakchott – Mauritanie
+- **واتساب**: +222 44 66 66 99
+- **هاتف**: +222 44 66 66 99
+- **الموقع**: نواكشوط – موريتانيا
 
-## 📄 Licence
+## 📄 الترخيص
 
-© 2026 Siraj. Tous droits réservés.
+© 2026 سِراج. جميع الحقوق محفوظة.
 
 ---
 
-## 🛠️ Développement Local
+## 🛠️ التطوير المحلي
 
-Pour tester localement:
+للاختبار محلياً:
 
-1. Ouvrez `index.html` dans votre navigateur
-2. Ou utilisez un serveur local:
+1. افتح `index.html` في متصفحك
+2. أو استخدم خادم محلي:
    ```bash
    # Python 3
    python -m http.server 8000
@@ -141,35 +139,56 @@ Pour tester localement:
    # Node.js
    npx serve
    ```
-3. Accédez à `http://localhost:8000`
+3. افتح `http://localhost:8000`
 
-## ✅ Checklist avant déploiement
+## ✅ قائمة التحقق قبل النشر
 
-- [ ] Ajouter le logo `assets/siraj_icon.png`
-- [ ] Ajouter les captures d'écran dans `assets/screenshots/`
-- [ ] Ajouter le fichier d'installation `downloads/siraj-trial.exe`
-- [ ] Vérifier tous les liens
-- [ ] Tester sur mobile
-- [ ] Tester sur différents navigateurs
-- [ ] Vérifier l'orthographe
-- [ ] Optimiser les images (compression)
-- [ ] Ajouter Google Analytics (optionnel)
+- [ ] إضافة الشعار `assets/sira_icon.png` ✅
+- [ ] إضافة لقطات الشاشة في `assets/screenshots/`
+- [ ] إضافة ملف التثبيت `downloads/siraj-trial.exe`
+- [ ] التحقق من جميع الروابط
+- [ ] الاختبار على الموبايل
+- [ ] الاختبار على متصفحات مختلفة
+- [ ] التحقق من الإملاء
+- [ ] تحسين الصور (ضغط)
+- [ ] إضافة Google Analytics (اختياري)
 
-## 🌐 Navigateurs Supportés
+## 🌐 المتصفحات المدعومة
 
-- Chrome (dernière version)
-- Firefox (dernière version)
-- Safari (dernière version)
-- Edge (dernière version)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Chrome (آخر إصدار)
+- Firefox (آخر إصدار)
+- Safari (آخر إصدار)
+- Edge (آخر إصدار)
+- متصفحات الموبايل (iOS Safari, Chrome Mobile)
 
-## 📊 Performance
+## 📊 الأداء
 
-- Temps de chargement: < 2s
-- Score Lighthouse: > 90
-- Mobile-friendly: Oui
-- SEO-friendly: Oui
+- وقت التحميل: < 2 ثانية
+- درجة Lighthouse: > 90
+- متوافق مع الموبايل: نعم
+- محسّن لمحركات البحث: نعم
 
 ---
 
-**Développé avec ❤️ pour le marché mauritanien**
+## 🎯 ملاحظات مهمة
+
+### ملف التحميل
+حالياً، زر التحميل يشير إلى `downloads/siraj-trial.exe`. إذا لم يكن الملف موجوداً، سيظهر تنبيه للمستخدم يطلب منه التواصل عبر واتساب.
+
+لإضافة ملف التحميل الفعلي:
+1. ضع ملف `siraj-trial.exe` في مجلد `downloads/`
+2. الموقع سيقوم بتحميله تلقائياً عند الضغط على الزر
+
+### لقطات الشاشة
+لإضافة لقطات الشاشة:
+1. ضع الصور في `assets/screenshots/`
+2. استخدم الأسماء: `pos.png`, `inventory.png`, `reports.png`
+3. الحجم المقترح: 1200x800 بكسل
+
+### تبديل اللغة
+- النقر على زر اللغة يحفظ التفضيل في المتصفح
+- يتم إعادة التوجيه تلقائياً للصفحة المناسبة (عربي/فرنسي)
+
+---
+
+**تم التطوير بـ ❤️ للسوق الموريتاني**
